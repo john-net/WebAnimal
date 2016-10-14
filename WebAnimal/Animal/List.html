@@ -1,0 +1,36 @@
+﻿<h1>Животные России</h1>
+
+<div>
+    <a href="#/create" class="btn">Создать новое...</a>
+</div>
+
+<label>Поиск: <input ng-model="search"></label>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Имя</th>
+            <th>Цвет</th>
+            <th>Вид</th>
+            <th>Регион</th>
+            <th>Провинция</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="item in animals | filter:{Name:search}" class="item" >
+            <td>{{ item.Id }}</td>
+            <td>{{ item.Name }}</td>
+            <td>{{ item.Color }}</td>
+            <td>{{ item.Species }}</td>
+            <td>{{ item.Region }}</td>
+            <td>{{ item.Province }}</td>            
+            <td>
+                <a href="#/edit/{{item.Id}}" class="glyphicon glyphicon-edit"></a>
+            </td>
+            <td>
+                <a href="#/delete/{{item.Id}}" class="glyphicon glyphicon-trash"></a>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,62 @@
+﻿<h3>Are you want to sure to delete this record?</h3>
+<hr />
+<form class="form-horizontal" style="max-width: 500px;">
+    <div class="form-group">
+        <label class="control-label col-xs-3">
+            Имя :
+        </label>
+        <div class="col-xs-9">
+            <p class="form-control-static">
+                {{ name }}
+            </p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">
+            Цвет :
+        </label>
+        <div class="col-xs-9">
+            <p class="form-control-static">
+                {{ color }}
+            </p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">
+            Вид :
+        </label>
+        <div class="col-xs-9">
+            <p class="form-control-static">
+                {{ species }}
+            </p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">
+            Регион :
+        </label>
+        <div class="col-xs-9">
+            <p class="form-control-static">
+                {{ region }}
+            </p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">
+            Провинция :
+        </label>
+        <div class="col-xs-9">
+            <p class="form-control-static">
+                {{ province }}
+            </p>
+        </div>
+    </div>    
+    <div class="form-group">
+        <div class="col-xs-offset-3 col-xs-9 text-center">
+            <a href="#/list" class="btn btn-info">Назад к списку</a>
+            <button type="submit" class="btn btn-primary" ng-click="delete()">
+                Удалить
+            </button>
+        </div>
+    </div>
+</form>
